@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "we-are-being-watched"
+version = "0.1.0"
+description = "Job Interview Project that implements simple web app to track visited resources"
+authors = ["Ilya Chesalin <ilya.chesalin@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+alembic = "^1.13.1"
+asyncpg = "^0.29.0"
+black = "^23.12.1"
+fastapi = "^0.105.0"
+httpx = "^0.26.0"
+isort = "^5.13.2"
+pydantic = "^2.5.2"
+pytest = "^7.4.3"
+pytest-asyncio = "^0.23.2"
+sqlalchemy = "^2.0.23"
+uvicorn = "^0.25.0"
+
+[tool.black]
+line-length = 80
+target-version = ['py312']
+
+[tool.isort]
+profile = "black"
+src_paths = ["app"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
